@@ -1,0 +1,77 @@
+<div class="background-image">
+<div >
+<button mat-raised-button class="button-container" color="primary" (click)="toggleForm()">
+    {{ isFormVisible ? 'Hide' : 'Add Blogs' }}
+  </button>
+  <button mat-raised-button class="button-container" color="primary" (click)="toggle()">
+    {{ isVisible ? 'Hide' : 'Update Blogs' }}
+  </button>
+  <button mat-raised-button class="button-container" color="primary" (click)="toggleDelete()">
+    {{ deleteVisible ? 'Hide' : 'Delete Blogs' }}
+  </button>
+</div>
+  <div *ngIf="isFormVisible" class="form-container">
+    <form (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="fill">
+        <mat-label>Blog Name</mat-label>
+        <input matInput  [(ngModel)]="postData.name" name="name" placeholder="Name"  required>
+      </mat-form-field><br>
+      <mat-form-field appearance="fill">
+        <mat-label>Category</mat-label>
+        <input matInput placeholder="Category"  [(ngModel)]="postData.category" name="category" required>
+      </mat-form-field><br>
+      <mat-form-field appearance="fill">
+        <mat-label>Article</mat-label>
+        <textarea matInput placeholder="Article" [(ngModel)]="postData.article" name="article"  required> </textarea>
+      </mat-form-field><br>
+         <mat-form-field appearance="fill">
+        <mat-label>Author Name</mat-label>
+        <input matInput type="text" placeholder="AuthorName"  [(ngModel)]="postData.authorName" name="authorname" required>
+      </mat-form-field><br>
+      <button mat-raised-button color="primary" type="submit">
+        Submit
+      </button>
+    </form>
+    </div> 
+
+    <div *ngIf="isVisible" class="form-container">
+      <form (ngSubmit)="onUpdate()">
+        <mat-form-field appearance="fill">
+          <mat-label>Blog Id</mat-label>
+          <input matInput  [(ngModel)]="postData.id" name="id" placeholder="Id"  required>
+        </mat-form-field><br>
+        <mat-form-field appearance="fill">
+          <mat-label>Blog Name</mat-label>
+          <input matInput  [(ngModel)]="postData.name" name="name" placeholder="Name"  required>
+        </mat-form-field><br>
+        <mat-form-field appearance="fill">
+          <mat-label>Category</mat-label>
+          <input matInput placeholder="Category"  [(ngModel)]="postData.category" name="category" required>
+        </mat-form-field><br>
+        <mat-form-field appearance="fill">
+          <mat-label>Article</mat-label>
+          <textarea matInput placeholder="Article" [(ngModel)]="postData.article" name="article"  required> </textarea>
+        </mat-form-field><br>
+           <mat-form-field appearance="fill">
+          <mat-label>Author Name</mat-label>
+          <input matInput type="text" placeholder="AuthorName"  [(ngModel)]="postData.authorName" name="authorName" required>
+        </mat-form-field><br>
+        <button mat-raised-button color="primary" type="submit">
+          Submit
+        </button>
+      </form>
+      </div> 
+
+      <div *ngIf="deleteVisible" class="form-container">
+        <form (ngSubmit)="onDelete()">
+          <mat-form-field appearance="fill">
+            <mat-label>Blog Name</mat-label>
+            <input matInput  [(ngModel)]="postData.name" name="name" placeholder="Name"  required>
+          </mat-form-field><br>
+          <button mat-raised-button color="primary" type="submit">
+            Submit
+          </button>
+        </form> 
+  </div> 
+            
+</div>

@@ -1,0 +1,32 @@
+  
+  <div  class="blog-container">
+    <div style="margin-top: 0cm;">
+    <mat-form-field appearance="fill">
+      <mat-label>Category</mat-label>
+      <mat-select (selectionChange)="onCategoryChange($event)" placeholder="Select a category">
+        <mat-option value="">All Categories</mat-option>
+        <mat-option *ngFor="let category of categories" [value]="category">
+          {{ category }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+    <mat-card *ngFor="let blog of blogs" class="blog-card">
+      <mat-card-header>
+        <mat-card-title style="color: rgb(46, 33, 121);" class="card-title">{{ blog.name }}</mat-card-title>
+        <mat-card-subtitle>by {{ blog.authorName }}</mat-card-subtitle>
+        <mat-card-subtitle style="color: rgb(175, 166, 166);">Id :{{ blog.id }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content style="font-family:Arial, Helvetica, sans-serif">
+        <p>{{ blog.article }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <mat-paginator
+  [length]="blogs.length"
+  [pageSize]="pageSize"
+  [pageSizeOptions]="[5, 10, 25, 100]"
+  (page)="onPageChange($event)">
+</mat-paginator>

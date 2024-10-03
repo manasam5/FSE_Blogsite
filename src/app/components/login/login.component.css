@@ -1,0 +1,32 @@
+mat-card {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  mat-form-field {
+    width: 100%;
+  }
+
+  .background-image  {
+    display: flex; /* Enable flexbox */
+    align-items: center; /* Center vertically */
+    justify-content: center;
+    background-image: url('/assets/login.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+
+  .login-container {
+    width: 100%; /* Full width */
+    max-width: 400px; /* Max width for the form */
+    padding: 16px; /* Optional: Padding around the form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Shadow effect */
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: Semi-transparent background */
+    border-radius: 8px; /* Optional: Rounded corners */
+  }
+
+  .custom-title {
+    color: #1a538d; 
+  }

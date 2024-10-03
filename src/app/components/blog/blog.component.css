@@ -1,0 +1,40 @@
+.blog-container {
+    padding: 16px;
+  }
+  
+  .blog-card {
+    margin-bottom: 16px;
+  }
+  
+  .card-title {
+    color: #1976d2; /* Change this to your desired color */
+    font-size: 24px; /* Adjust font size if needed */
+  }
+  
+  .filter-container {
+    padding: 10px;
+  }
+  
+  .blog-container {
+    padding: 16px;
+    display: flex; 
+    background-image: url('/assets/wavy.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 200vh;
+    flex-direction: column; 
+  }
+
+  .blog-card {
+    margin-bottom: 16px;
+  }
+
+  @media (max-width: 768px) {
+    .card-item {
+      width: 90%; /* Make it smaller on smaller screens */
+    }
+  }
+  
+  .button-container {
+    margin-top: -10px; 
+  }

@@ -1,0 +1,28 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+  }
+
+  .background-image  {
+    display: flex; 
+    background-image: url('/assets/blogs.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+
+  button {
+    margin: 5px;              
+    padding: 10px 15px;      
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 500px; 
+  }
